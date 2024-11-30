@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+.buy-button {
+  margin-top: 30px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #6391c6;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+  background-color: blue;
+}
+
+.judul {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.box2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.card-first {
+  flex: 1;
+  min-width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid blue;
+}
+
+.card-first img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card-first h2,
+.card-first p {
+  padding: 10px;
+}
+
+.describe {
+  flex: 2;
+  min-width: 300px;
+}
+
+.describe h2 {
+  margin-bottom: 15px;
+}
+
+.box {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid blue;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card h2,
+.card p {
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .box2 {
+    flex-direction: column;
+  }
+
+  .card-first,
+  .describe {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .box {
+    grid-template-columns: 1fr;
+  }
+}
